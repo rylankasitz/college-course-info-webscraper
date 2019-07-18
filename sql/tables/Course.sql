@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS Course (
     CourseID integer PRIMARY KEY AUTOINCREMENT,
-    PrerequisitesID, FOREIGN KEY,
-    ProfessorID, FOREIGN KEY NOT NULL,
+    PrerequisitesID integer FOREIGN KEY,
+    ProfessorID integer FOREIGN KEY NOT NULL,
     Name text NOT NULL,
     Number text NOT NULL,
     Department text NOT NULL,
