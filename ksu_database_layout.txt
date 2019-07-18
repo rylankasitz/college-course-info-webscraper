@@ -1,0 +1,40 @@
+Tables
+    Catalog:
+        CatalogID : int, PK
+        CourseID : int, FK
+        ProfessorID : int, FK
+
+    Courses:
+        CourseID : int, PK
+        URL : string
+        Number : int
+        Department : string
+        DepartmentAbbreviation : string
+        Name : string
+        Description : string
+        Semester : string
+        Year : int
+        StartTime : int
+        EndTime : int
+        Online : bit
+        Location : string
+        PrerequisitesID : int, FK
+        ProfessorID : int, FK
+
+    Prerequisites:
+        PrerequisitesID : int, PK
+        CourseID : int, FK
+        PrerequisiteID : int FK
+    
+    Professors:
+        ProfessorID : int, PK
+        FirstName : string
+        LastName : string
+
+        RateMyProfessorID : FK
+    
+    RateMyProfessor:
+        RateMyProfessorID : int, PK
+        Score : int
+        URL : string
+        ...
